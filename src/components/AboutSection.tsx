@@ -59,22 +59,29 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <div className="prose prose-lg max-w-none text-foreground">
-              <p className="text-lg leading-relaxed">
-                Hello! I'm <strong className="text-primary">Ayesha Shabbir</strong>, a passionate Computer Science graduate 
-                with a unique blend of technical expertise and creative vision. I specialize in creating 
-                <strong className="text-portfolio-secondary"> user-friendly, aesthetic, and functional digital experiences</strong> 
-                that bridge the gap between beautiful design and seamless functionality.
-              </p>
-              <p className="text-lg leading-relaxed">
-                With expertise spanning <strong className="text-portfolio-accent">UI/UX design, frontend development, and graphic design</strong>, 
-                I bring a holistic approach to every project. My goal is to create digital solutions that not only 
-                look stunning but also provide intuitive, meaningful experiences for users.
-              </p>
-              <p className="text-lg leading-relaxed">
-                I believe that great design is invisible – it works so well that users don't have to think about it. 
-                Whether I'm designing a mobile app interface, developing a responsive website, or creating compelling 
-                visual graphics, I'm always focused on solving real problems through thoughtful, user-centered design.
-              </p>
+             <p className="text-lg leading-relaxed">
+  Hello! I'm <strong className="text-primary">Ayesha Shabbir</strong>, a graduate in 
+  <strong className="text-portfolio-secondary"> Computer Science</strong> who is passionate about 
+  <strong className="text-portfolio-accent"> UI/UX design, front-end development, and creative digital storytelling</strong>. 
+  I take pleasure in converting concepts into interactive and user-friendly experiences, merging 
+  <strong className="text-portfolio-secondary"> design thinking with technical expertise</strong> to create products 
+  that are both functional and engaging.
+</p>
+
+<p className="text-lg leading-relaxed">
+  With practical experience in <strong className="text-portfolio-accent">Figma, React.js, and contemporary design tools</strong>, 
+  my goal is to develop digital solutions that inspire, connect, and make a lasting impact. I specialize in building 
+  <strong className="text-portfolio-secondary"> user-friendly, aesthetic, and functional experiences</strong> that bridge 
+  the gap between beautiful design and seamless functionality.
+</p>
+
+<p className="text-lg leading-relaxed">
+  I believe that great design is invisible – it works so well that users don’t have to think about it. 
+  Whether I’m <strong className="text-portfolio-accent">designing mobile app interfaces, developing responsive websites, 
+  or creating compelling visual graphics</strong>, I’m always focused on solving real problems through thoughtful, 
+  user-centered design.
+</p>
+
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
