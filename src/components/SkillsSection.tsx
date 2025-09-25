@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code, Palette, Lightbulb, Users, MessageCircle, Target } from 'lucide-react';
+import ParallaxElements from './ParallaxElements';
 
 const SkillsSection = () => {
   const ref = useRef(null);
@@ -29,8 +30,9 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-20 relative overflow-hidden">
+      <ParallaxElements />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -107,7 +109,7 @@ const SkillsSection = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="portfolio-card group cursor-pointer"
+                  className="portfolio-card group cursor-pointer pinterest-card"
                 >
                   <div className="flex items-center space-x-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${skill.color} bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300`}>

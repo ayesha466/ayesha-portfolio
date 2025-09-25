@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import ParallaxElements from './ParallaxElements';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -88,8 +89,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      <ParallaxElements />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -158,7 +160,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="portfolio-card"
+            className="portfolio-card pinterest-card"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

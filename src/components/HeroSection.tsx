@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Eye } from 'lucide-react';
+import PinterestBackground from './PinterestBackground';
 
 const HeroSection = () => {
   const handleDownloadCV = () => {
@@ -19,47 +20,9 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 animated-bg"></div>
-      
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-primary/20 to-portfolio-secondary/20 rounded-full blur-xl"
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-portfolio-accent/20 to-primary/20 rounded-full blur-xl"
-          animate={{
-            y: [0, 20, 0],
-            x: [0, -15, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-40 left-20 w-16 h-16 bg-gradient-to-r from-portfolio-secondary/20 to-portfolio-accent/20 rounded-full blur-xl"
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 20, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+      {/* Pinterest-Inspired Animated Background */}
+      <div className="absolute inset-0 animated-bg">
+        <PinterestBackground />
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -105,20 +68,24 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <button
+            <motion.button
               onClick={scrollToProjects}
               className="btn-hero group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               View My Work
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={handleDownloadCV}
               className="btn-outline group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
               Download CV
-            </button>
+            </motion.button>
           </motion.div>
         </motion.div>
 
@@ -133,6 +100,7 @@ const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
             onClick={scrollToProjects}
             className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
           >
             <ArrowDown className="h-6 w-6 text-foreground" />
           </motion.button>

@@ -167,7 +167,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="portfolio-card group"
+              className="portfolio-card group pinterest-card"
             >
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-primary/10 to-portfolio-secondary/10">
