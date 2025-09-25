@@ -16,8 +16,8 @@ const ProjectsSection = () => {
       category: "frontend",
       tools: ["React Native", "JavaScript", "Mobile UI"],
       image: "/api/placeholder/400/250",
-      liveDemo: "#",
-      github: "#",
+      // liveDemo: "#",
+      github: "https://github.com/ayesha466/Smart-Skill-Ebook-APP",
       type: "mobile"
     },
     {
@@ -27,8 +27,8 @@ const ProjectsSection = () => {
       category: "frontend",
       tools: ["React.js", "Tailwind CSS", "JavaScript"],
       image: "/api/placeholder/400/250",
-      liveDemo: "#",
-      github: "#",
+      // liveDemo: "#",
+      github: "https://github.com/ayesha466/ecommerce-frontend-design",
       type: "web"
     },
     {
@@ -36,62 +36,73 @@ const ProjectsSection = () => {
       title: "Nexus Platform Interface",
       description: "Modern dashboard and platform interface design focusing on user experience and clean, intuitive navigation.",
       category: "frontend",
-      tools: ["React.js", "CSS", "UI/UX"],
+      tools: ["React.js", "Tailwind CSS", "Typescript"],
       image: "/api/placeholder/400/250",
-      liveDemo: "#",
-      github: "#",
+      // liveDemo: "#",
+      github: "https://github.com/ayesha466/Nexus-Project-DHC-563",
       type: "web"
     },
     {
       id: 4,
-      title: "Mobile App Wireframes & Prototypes",
+      title: "Mobile App UI,Wireframes & Prototypes",
       description: "Complete wireframing and prototyping suite for various mobile applications with focus on user flow and interaction design.",
       category: "uiux",
-      tools: ["Figma", "Adobe XD", "Prototyping"],
+      tools: ["Figma", "Wireframing", "Prototyping"],
       image: "/api/placeholder/400/250",
-      figmaLink: "#",
+      figmaLink: "https://www.figma.com/design/UrTHwLh6jPRwr8bz83C9tB/Smart-Building-E-book-APP?node-id=0-1&t=sWl0wHCbCP8qkVE9-1",
       type: "design"
     },
     {
-      id: 5,
-      title: "App Design System",
-      description: "Comprehensive design system including components, typography, color schemes, and design guidelines for consistent app interfaces.",
-      category: "uiux",
-      tools: ["Figma", "Design Systems", "UI Components"],
-      image: "/api/placeholder/400/250",
-      figmaLink: "#",
-      type: "design"
-    },
+  id: 5,
+  title: "Web Homepage UI Design",
+  description: "Modern and responsive homepage design built in Figma, emphasizing usability, accessibility, and visual storytelling.",
+  category: "uiux",
+  tools: ["Figma", "Web UI"],
+  image: "/images/web-homepage-ui.png", 
+  figmaLink: "https://www.figma.com/design/gMboL2Th8bn78r76AQ3WRk/Untitled?node-id=0-1&t=dfjvLqMIAJqzc68o-1",
+  type: "design"
+}
     {
-      id: 6,
-      title: "Brand Identity & Logo Collection",
-      description: "Creative logo designs and brand identity packages for various clients, showcasing versatility in graphic design.",
-      category: "graphics",
-      tools: ["Illustrator", "Photoshop", "Branding"],
-      image: "/api/placeholder/400/250",
-      behanceLink: "#",
-      type: "graphics"
-    },
-    {
-      id: 7,
-      title: "Social Media Graphics Suite",
-      description: "Eye-catching social media graphics, posts, and promotional materials designed for maximum engagement and brand consistency.",
-      category: "graphics",
-      tools: ["Photoshop", "Illustrator", "Social Media"],
-      image: "/api/placeholder/400/250",
-      behanceLink: "#",
-      type: "graphics"
-    },
-    {
-      id: 8,
-      title: "Game UI Panels & Assets",
-      description: "Gaming interface panels, HUD elements, and digital assets designed for immersive gaming experiences.",
-      category: "graphics",
-      tools: ["Photoshop", "Game Design", "UI Assets"],
-      image: "/api/placeholder/400/250",
-      behanceLink: "#",
-      type: "graphics"
-    }
+  id: 6,
+  title: "Logo & Brand Identity Collection",
+  description: "A collection of creative logo designs and brand identity packages for different clients.",
+  category: "graphics",
+  tools: ["Illustrator", "Photoshop", "Branding"],
+  image: "/images/logo-brand-identity.png",
+  behanceLink: "https://www.behance.net/your-logo-collection-link",
+  type: "graphics"
+},
+{
+  id: 7,
+  title: "Social Media Graphics Suite",
+  description: "Engaging social media posts and graphics designed to maintain brand consistency.",
+  category: "graphics",
+  tools: ["Photoshop", "Illustrator", "Canva"],
+  image: "/images/social-media-designs.png",
+  behanceLink: "https://www.behance.net/your-social-media-link",
+  type: "graphics"
+},
+{
+  id: 8,
+  title: "Poster & Brochure Designs",
+  description: "Posters and brochures created with clean layouts and professional design elements.",
+  category: "graphics",
+  tools: ["Photoshop", "Illustrator"],
+  image: "/images/poster-brochure.png",
+  behanceLink: "https://www.behance.net/your-poster-brochure-link",
+  type: "graphics"
+},
+{
+  id: 9,
+  title: "Game Panel UI & Assets",
+  description: "Custom game panels and UI assets designed for an immersive user experience.",
+  category: "graphics",
+  tools: ["Photoshop", "Illustrator"],
+  image: "/images/game-ui.png",
+  behanceLink: "https://www.behance.net/your-game-panel-link",
+  type: "graphics"
+}
+
   ];
 
   const filters = [
