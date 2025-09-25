@@ -9,14 +9,14 @@ const SkillsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const technicalSkills = [
-    { name: "React.js", level: 90 },
-    { name: "React Native", level: 85 },
-    { name: "JavaScript", level: 90 },
-    { name: "Tailwind CSS", level: 95 },
-    { name: "HTML/CSS", level: 95 },
+    { name: "React.js", level: 80 },
+    { name: "React Native", level: 80 },
+    { name: "JavaScript", level: 80 },
+    { name: "Tailwind CSS", level: 75 },
+    { name: "HTML/CSS", level: 90 },
     { name: "Figma", level: 90 },
-    { name: "Adobe XD", level: 85 },
-    { name: "Photoshop", level: 80 },
+    { name: "Canva", level: 90 },
+    { name: "Photoshop", level: 75 },
     { name: "Illustrator", level: 75 }
   ];
 
