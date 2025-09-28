@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import ParallaxElements from './ParallaxElements';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -77,15 +78,42 @@ const ContactSection = () => {
       return;
     }
 
-    // Simulate form submission
-    setTimeout(() => {
+    // EmailJS configuration
+    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+    const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_email: 'ayeshashabbir855@gmail.com' // Your email address
+    };
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      
+      // Success notification
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
+      
+      // Reset form
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      // Error notification
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive"
+      });
+      console.error('EmailJS error:', error);
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (

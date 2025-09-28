@@ -85,7 +85,7 @@ const ProjectsSection = () => {
       category: "uiux",
       tools: ["Figma", "Web UI"],
       image: "/images/pvc web.png", 
-      figmaLink: "https://www.figma.com/design/gMboL2Th8bn78r76AQ3WRk/Untitled?node-id=0-1&t=dfjvLqMIAJqzc68o-1",
+      figmaLink: "https://www.figma.com/design/gMboL2Th8bn78r76AQ3WRk/Web-Homepage?node-id=0-1&t=etcbeSGf7kafj2xr-1",
       type: "design"
     },
     {
@@ -115,7 +115,7 @@ const ProjectsSection = () => {
       category: "graphics",
       tools: ["Photoshop", "Illustrator", "Canva"],
       image: "/images/standee.jpg",
-      behanceLink: "https://www.behance.net/portfolio/editor?project_id=235493349",
+      behanceLink: "https://www.behance.net/gallery/235493349/Social-Media-Print-Design-Portfolio",
       type: "graphics"
     },
     // {
