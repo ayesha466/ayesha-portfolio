@@ -26,7 +26,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+92-3354407363",
+      value: "+92-33*********",
       href: "tel:+92-3354407363"
     },
     {
