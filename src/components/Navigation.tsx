@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,8 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
+    { name: 'Experience', href: '#experience' },
     // { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -49,9 +52,7 @@ const Navigation = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-primary to-portfolio-secondary bg-clip-text text-transparent">
-              Ayesha Shabbir
-            </a>
+            <Logo />
           </motion.div>
 
           {/* Desktop Navigation */}

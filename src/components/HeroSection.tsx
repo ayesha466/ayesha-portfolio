@@ -3,11 +3,38 @@ import { ArrowDown, Download, Eye } from 'lucide-react';
 import PinterestBackground from './PinterestBackground';
 
 const HeroSection = () => {
+  // Your Google Drive CV URL
+  const googleDriveCVUrl = 'https://drive.google.com/file/d/1drildvfwB47rQ4fSY_fhktjqtg7Jpxka/view?usp=sharing';
+  
+  // Convert Google Drive URL for direct viewing
+  const getGoogleDriveViewUrl = () => {
+    if (googleDriveCVUrl.includes('drive.google.com/file/d/')) {
+      const fileId = googleDriveCVUrl.split('/')[5];
+      return `https://drive.google.com/file/d/${fileId}/preview`;
+    }
+    return googleDriveCVUrl;
+  };
+  
+  // Convert Google Drive URL for downloading
+  const getGoogleDriveDownloadUrl = () => {
+    if (googleDriveCVUrl.includes('drive.google.com/file/d/')) {
+      const fileId = googleDriveCVUrl.split('/')[5];
+      return `https://drive.google.com/uc?export=download&id=${fileId}`;
+    }
+    return googleDriveCVUrl;
+  };
+
+  const handleViewCV = () => {
+    // Open CV in a new tab
+    window.open(getGoogleDriveViewUrl(), '_blank');
+  };
+
   const handleDownloadCV = () => {
-    // Create a downloadable CV link
+    // Create a downloadable link that opens Google Drive CV
     const link = document.createElement('a');
-    link.href = '#'; // Replace with actual CV file path
+    link.href = getGoogleDriveDownloadUrl();
     link.download = 'Ayesha_Shabbir_CV.pdf';
+    link.target = '_blank';
     link.click();
   };
 
@@ -77,6 +104,17 @@ const HeroSection = () => {
               <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               View My Work
             </motion.button>
+            
+            <motion.button
+              onClick={handleViewCV}
+              className="btn-outline group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Eye className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+              View CV
+            </motion.button>
+            
             <motion.button
               onClick={handleDownloadCV}
               className="btn-outline group"
